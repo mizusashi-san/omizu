@@ -1,0 +1,20 @@
+{
+  "name": "omizu",
+  "version": "0.0.0",
+  "private": true,
+  "description": "毎日の水の飲み忘れを、自然に気をつけられるようになるアプリ",
+  "scripts": {
+    "dev": "pnpm --filter main dev",
+    "build": "pnpm --filter main build",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.6"
+  },
+  "engines": {
+    "node": ">=23.0.0",
+    "pnpm": ">=10.18.0"
+  }
+}
