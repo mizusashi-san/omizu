@@ -11,7 +11,7 @@ const pool = createPool({
   connectTimeout: 5000,
   enableKeepAlive: true,
   keepAliveInitialDelay: 0,
-  ssl: process.env.DB_SSL_ENABLED ?.toLowerCase() === 'true' ? {} : undefined,
+  ssl: process.env.DB_SSL_ENABLED?.toLowerCase() === 'true' ? {} : undefined,
 });
 
 const drizzleClient = drizzle(pool, { schema, mode: 'default' });
