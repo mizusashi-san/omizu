@@ -5,6 +5,7 @@ import {
   timestamp,
   boolean,
 } from "drizzle-orm/mysql-core";
+import { sql } from "drizzle-orm";
 
 export const user = mysqlTable("user", {
   id: varchar("id", { length: 36 }).primaryKey(),
@@ -12,9 +13,8 @@ export const user = mysqlTable("user", {
   email: varchar("email", { length: 255 }).notNull().unique(),
   emailVerified: boolean("email_verified").default(false).notNull(),
   image: text("image"),
-  createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
+  createdAt: timestamp("created_at", { fsp: 3 }).default(sql`CURRENT_TIMESTAMP(3)`).notNull(),
   updatedAt: timestamp("updated_at", { fsp: 3 })
-    .defaultNow()
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
 });
@@ -23,7 +23,7 @@ export const session = mysqlTable("session", {
   id: varchar("id", { length: 36 }).primaryKey(),
   expiresAt: timestamp("expires_at", { fsp: 3 }).notNull(),
   token: varchar("token", { length: 255 }).notNull().unique(),
-  createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
+  createdAt: timestamp("created_at", { fsp: 3 }).default(sql`CURRENT_TIMESTAMP(3)`).notNull(),
   updatedAt: timestamp("updated_at", { fsp: 3 })
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
@@ -48,7 +48,7 @@ export const account = mysqlTable("account", {
   refreshTokenExpiresAt: timestamp("refresh_token_expires_at", { fsp: 3 }),
   scope: text("scope"),
   password: text("password"),
-  createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
+  createdAt: timestamp("created_at", { fsp: 3 }).default(sql`CURRENT_TIMESTAMP(3)`).notNull(),
   updatedAt: timestamp("updated_at", { fsp: 3 })
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
@@ -59,9 +59,8 @@ export const verification = mysqlTable("verification", {
   identifier: text("identifier").notNull(),
   value: text("value").notNull(),
   expiresAt: timestamp("expires_at", { fsp: 3 }).notNull(),
-  createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
+  createdAt: timestamp("created_at", { fsp: 3 }).default(sql`CURRENT_TIMESTAMP(3)`).notNull(),
   updatedAt: timestamp("updated_at", { fsp: 3 })
-    .defaultNow()
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
 });
