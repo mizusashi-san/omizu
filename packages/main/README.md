@@ -2,6 +2,34 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Database Setup
+
+This project uses MySQL for local development. Start the database using Docker Compose:
+
+```bash
+# Start MySQL container
+docker compose up -d
+
+# Stop MySQL container
+docker compose down
+
+# Stop and remove data
+docker compose down -v
+```
+
+The MySQL database will be available at `localhost:3306` with the following default credentials (configured in `.env`):
+- Username: `root`
+- Password: `root`
+- Database: `test`
+
+After starting the database, run migrations:
+
+```bash
+pnpm drizzle-kit push
+```
+
+### Development Server
+
 First, run the development server:
 
 ```bash
