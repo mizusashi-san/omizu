@@ -8,11 +8,7 @@
     "./styles.css": "./src/index.css"
   },
   "imports": {
-    "#components/ui/*": "./src/components/ui/*.tsx",
-    "#components/*": "./src/components/*.tsx",
-    "#utils/*": "./src/utils/*.ts",
-    "#lib/*": "./src/lib/*.ts",
-    "#hooks/*": "./src/hooks/*.ts"
+    "#*": "./src/*"
   },
   "sideEffects": [
     "*.css"
@@ -22,6 +18,7 @@
     "lint:fix": "biome check --write ."
   },
   "dependencies": {
+    "@radix-ui/react-select": "2.2.6",
     "@radix-ui/react-slot": "1.2.4",
     "@tailwindcss/vite": "4.1.17",
     "class-variance-authority": "catalog:",
