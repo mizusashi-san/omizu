@@ -3,7 +3,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Omizu',
-  description: '今日、どれくらい飲んだ？分量を記録するだけ。シンプルで続けやすいOmizuで毎日の水分管理をスマートに',
+  description:
+    '今日、どれくらい飲んだ？分量を記録するだけ。シンプルで続けやすいOmizuで毎日の水分管理をスマートに',
 };
 
 export default function RootLayout({
@@ -13,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
