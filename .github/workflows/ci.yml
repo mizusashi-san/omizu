@@ -1,0 +1,15 @@
+name: ci
+
+on: pull_request
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+      - name: Setup pnpm
+        uses: ./.github/actions/setup-pnpm
+      - name: Run check
+        run: pnpm biome ci

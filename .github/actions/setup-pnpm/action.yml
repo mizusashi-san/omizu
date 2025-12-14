@@ -1,0 +1,18 @@
+name: Setup pnpm
+description: Setup pnpm
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@b9e1dbc72ff7358f971cc0b7c62c7a0d83f1068b
+
+    - name: Setup Node.js
+      uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f
+      with:
+        node-version-file: 'package.json'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
