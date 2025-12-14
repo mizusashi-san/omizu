@@ -15,6 +15,8 @@ catalog:
 ignoredBuiltDependencies:
   - '@prisma/client'
   - '@prisma/engines'
+  - '@swc/core'
   - better-sqlite3
   - esbuild
   - prisma
+  - sharp
