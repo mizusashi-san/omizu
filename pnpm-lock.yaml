@@ -56,6 +56,9 @@ importers:
       drizzle-orm:
         specifier: 0.45.1
         version: 0.45.1(@prisma/client@5.22.0(prisma@5.22.0))(@tidbcloud/serverless@0.2.0)(@types/better-sqlite3@7.6.13)(better-sqlite3@12.4.1)(kysely@0.28.8)(mysql2@3.15.3)(prisma@5.22.0)
+      hono:
+        specifier: 4.11.1
+        version: 4.11.1
       next:
         specifier: 16.0.10
         version: 16.0.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -1663,6 +1666,10 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
+  hono@4.11.1:
+    resolution: {integrity: sha512-KsFcH0xxHes0J4zaQgWbYwmz3UPOOskdqZmItstUG93+Wk1ePBLkLGwbP9zlmh1BFUiL8Qp+Xfu9P7feJWpGNg==}
+    engines: {node: '>=16.9.0'}
+
   iconv-lite@0.7.1:
     resolution: {integrity: sha512-2Tth85cXwGFHfvRgZWszZSvdo+0Xsqmw8k8ZwxScfcBneNUraK+dxRxRm24nszx80Y0TVio8kKLt5sLE7ZCLlw==}
     engines: {node: '>=0.10.0'}
@@ -3195,6 +3202,8 @@ snapshots:
     optional: true
 
   graceful-fs@4.2.11: {}
+
+  hono@4.11.1: {}
 
   iconv-lite@0.7.1:
     dependencies:
