@@ -1,5 +1,5 @@
-import { Button } from "@omizu/components";
-import type { FC } from "react";
+import { Button } from '@omizu/components';
+import type { FC } from 'react';
 
 export const Example: FC = () => {
   return (
@@ -8,9 +8,7 @@ export const Example: FC = () => {
       <p className="text-primary">
         これはサンプルコンポーネントです。必要に応じてカスタマイズしてください。
       </p>
-      <Button>
-        Click me
-      </Button>
+      <Button>Click me</Button>
     </div>
   );
-}
+};
