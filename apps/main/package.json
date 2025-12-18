@@ -9,11 +9,14 @@
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "generate": "drizzle-kit generate",
-    "migrate": "drizzle-kit migrate"
+    "migrate": "drizzle-kit migrate",
+    "test": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@omizu/components": "workspace:^",
-    "@omizu/helpers": "workspace:^",
+    "@omizu/components": "workspace:*",
+    "@omizu/helpers": "workspace:*",
     "better-auth": "1.4.6",
     "drizzle-orm": "0.45.1",
     "hono": "4.11.1",
@@ -23,13 +26,26 @@
   },
   "devDependencies": {
     "@next/env": "16.0.10",
+    "@storybook/addon-a11y": "catalog:",
+    "@storybook/addon-docs": "catalog:",
+    "@storybook/addon-vitest": "catalog:",
+    "@storybook/nextjs-vite": "catalog:",
     "@tailwindcss/postcss": "4.1.18",
-    "@types/node": "24.10.3",
+    "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react-swc": "4.2.2",
+    "@vitest/browser-playwright": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "@vitest/ui": "catalog:",
     "drizzle-kit": "0.31.8",
     "mysql2": "3.15.3",
+    "playwright": "catalog:",
+    "storybook": "catalog:",
     "tailwindcss": "catalog:",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vite": "^7.3.0",
+    "vitest": "catalog:",
+    "vitest-browser-react": "catalog:"
   }
 }
