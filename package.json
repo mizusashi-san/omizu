@@ -10,11 +10,13 @@
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",
-    "test": "pnpm run -r --if-present test"
+    "test": "pnpm run -r --if-present test",
+    "mcp:shadcn": "pnpm shadcn mcp"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.8",
     "playwright": "catalog:",
+    "shadcn": "3.6.2",
     "typescript": "5.9.3"
   },
   "engines": {
